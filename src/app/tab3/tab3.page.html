@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Contacts
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,64 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Contacts</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  
+  <div class="contacts table" aria-labelledby="contacts-caption-text">
+    <span class="caption" id="contacts-caption-text">Contact List</span>
+    <div class="contacts-header thead">
+      <span class="th" id="th-name">Picture:</span>
+      <span class="th" id="th-name">Name:</span>
+      <span class="th" id="th-phone">Phone:</span>
+      <span class="th" id="th-email">Email:</span>
+    </div>  
+    <ul class="tbody">
+      <li class="tr" itemscope itemtype="http://schema.org/Person">
+        <img src="./assets/yow.jpg" alt="" width="90" height="90">
+        <span class="td">
+          <span class="label">Name:</span>
+          <span class="data" itemprop="name" aria-labelledby="th-name">Faye</span>
+        </span>
+        <span class="td">
+          <span class="label">Phone:</span>
+          <span class="data" itemprop="telephone" aria-labelledby="th-phone">09752678917</span>
+        </span>
+        <span class="td">
+          <span class="label">Email:</span>
+          <span class="data" itemprop="email" aria-labelledby="th-email">faye@gmail.com</span>
+        </span>
+      </li>
+      <li class="tr" itemscope itemtype="http://schema.org/Person">
+        <img src="./assets/mama.jpg" alt="" width="90" height="90"/>
+        <span class="td">
+          <span class="label">Name:</span>
+          <span class="data" itemprop="name" aria-labelledby="th-name">Juvy</span>
+        </span>
+        <span class="td">
+          <span class="label">Phone:</span>
+          <span class="data" itemprop="telephone" aria-labelledby="th-phone">09876542112</span>
+        </span>
+        <span class="td">
+          <span class="label">Email:</span>
+          <span class="data" itemprop="email" aria-labelledby="th-email">juvy@gmail.com</span>
+        </span>
+      </li>
+      <li class="tr" itemscope itemtype="http://schema.org/Person">
+        <img src="./assets/papa.jpg" alt="" width="90" height="90"/>
+        <span class="td">
+          <span class="label">Name:</span>
+          <span class="data" itemprop="name" aria-labelledby="th-name">Charley</span>
+        </span>
+        <span class="td">
+          <span class="label">Phone:</span>
+          <span class="data" itemprop="telephone" aria-labelledby="th-phone">0987689328</span>
+        </span>
+        <span class="td">
+          <span class="label">Email:</span>
+          <span class="data" itemprop="email" aria-labelledby="th-email">charley@gmail.com</span>
+        </span>
+      </li>    
+    </ul>
+  </div>
 </ion-content>
