@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 
@@ -14,6 +15,7 @@ export class Tab3Page {
 
   contactlist  = [
     {id: 1, name: 'Faye Marie Oscobido', email: 'fayemarie@gmail.com'  ,number: '09517833231'},
+    {id: 1, name: 'Faye Marie', email: 'faye@gmail.com'  ,number: '09635643231'},
 
    
   ]
@@ -21,7 +23,10 @@ export class Tab3Page {
 
 
 
-  constructor(public alertController: AlertController ) {
+  constructor(public alertController: AlertController,public router: Router) {
+  }
+  redirectTo() {
+    this.router.navigateByUrl('/mailpage');
   }
   async  confirmation(index: number) {
     const alert = await this.alertController.create({
@@ -88,6 +93,5 @@ export class Tab3Page {
     await prompt.present();
 
   }
-
 
 }
